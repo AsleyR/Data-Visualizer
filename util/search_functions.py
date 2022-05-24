@@ -132,7 +132,7 @@ fit = []
 # fetulencia = dict(mpro = pore)
 # print(fetulencia)
 
-busqueda_dos_dict(prueba, "REDCAMIF", 'Cliente')
+# busqueda_dos_dict(prueba, "REDCAMIF", 'Cliente')
 # print(len(fit)
 # print(search)
 

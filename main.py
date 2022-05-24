@@ -1,7 +1,4 @@
-from tkinter import E
 import PySimpleGUI as sg
-# import csv
-# from csv_data import csvData
 import os.path
 import winds
 import util
@@ -9,12 +6,6 @@ import util
 # Create Windows
 main_window = winds.main_window
 file_window = winds.file_window
-
-
-# I do not know what the fuck does this function does LMAO
-def dlt_retrun_values(a):
-    for value in range(len(a)):
-        a.remove(a[value])
 
 
 # Program Controller

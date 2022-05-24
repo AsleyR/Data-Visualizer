@@ -112,6 +112,6 @@ new_d = {}
 # mierda = get_desired_dicts(ed3, "Color")
 # # print(mierda)
 # convert_dict_to_list(prueba, with_keys=False)
-search_dict(prueba, "red", 'Cliente')
+# search_dict(prueba, "red", 'Cliente')
 
 # test_function(ed)

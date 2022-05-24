@@ -1,6 +1,4 @@
-from ftplib import error_perm
 import PySimpleGUI as sg
-import csv
 import os.path
 import util
 import winds.layouts
@@ -56,6 +54,7 @@ def main_window():
                 csv_file = filename
                 data_class= util.csvData(csv_file)
                 data_dict = data_class.create_data_dict()
+
                 csv_data = util.get_dict_values(data_dict)
                 csv_headings = util.get_dict_keys(data_dict)
                 csv_data_dict = data_dict

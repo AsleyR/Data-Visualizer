@@ -1,6 +1,4 @@
 import PySimpleGUI as sg
-import csv
-import os.path
 import util
 import winds.layouts
 
