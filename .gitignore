@@ -8,3 +8,9 @@ util/__pycache__
 winds/__pycache__
 layouts/__pycache__
 data/
+
+**/.DS_Store
+echo ".DS_Store" >> ~/.gitignore_global
+echo "._.DS_Store" >> ~/.gitignore_global
+echo "**/.DS_Store" >> ~/.gitignore_global
+echo "**/._.DS_Store" >> ~/.gitignore_global
