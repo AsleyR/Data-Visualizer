@@ -32,7 +32,21 @@ class fileWindowLayout:
         print(f"executing: {combobox_value}")
 
 
-        filer_selection = [
+        filter_selection = [
+            [
+                sg.Text('Buscar en:'),
+                sg.Combo(
+                    headings, enable_events=True,
+                    key="-SEARCH FILTER-"
+                ),
+                sg.Input(size=(25,1), enable_events=True, key="-SEARCH-"),
+                sg.Text(
+                    '', enable_events=True, visible=False, 
+                    key="-SEARCH RESULT TEXT-"
+                    ),
+                sg.Button('Search', button_color='royal blue'),
+                sg.Button('Reset', size=(5,1), button_color='black')
+            ],
             [sg.Text('', enable_events=True, key="-FILTER STATUS-")],
             [
                 sg.Text('Filtrar por:'),
@@ -49,27 +63,13 @@ class fileWindowLayout:
                     ),
                 # sg.In(size=(25,1), enable_events=True, key="-FILTER-"),
                 sg.Text('')
-            ],
-            [
-                sg.Text('Buscar en:'),
-                sg.Combo(
-                    headings, enable_events=True,
-                    key="-SEARCH FILTER-"
-                ),
-                sg.Input(size=(25,1), enable_events=True, key="-SEARCH-"),
-                sg.Text(
-                    '', enable_events=True, visible=False, 
-                    key="-SEARCH RESULT TEXT-"
-                    ),
-                sg.Button('Search', button_color='royal blue'),
-                sg.Button('Reset', size=(5,1), button_color='black')
-            ],
+            ]
         ]
 
         layout = [
             header,
             data_table,
-            filer_selection,
+            filter_selection,
         ]
 
         return layout
