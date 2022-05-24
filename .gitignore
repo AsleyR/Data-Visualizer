@@ -1,0 +1,10 @@
+experiment_stuff/
+todo.txt
+ASLEY/
+test_2.py
+new_names.csv
+__pycache__
+util/__pycache__
+winds/__pycache__
+layouts/__pycache__
+data/
