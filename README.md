@@ -31,18 +31,19 @@ At the moment, this program can only read data from .csv files, so, it is not ve
 
 ## Features
 
+<h3>Display data</h3>
 <br>
-![open-file-gif](./media/gifs/open-gif.gif)
-<br>
-
-<h3>Search</h3>
-<br>
-![search-file-gif](./media/gifs/search-gif.gif)
+![open-file-gif](../media/../d_excel/media/gifs/open-gif.gif)
 <br>
 
 <h3>Search</h3>
 <br>
-![filter-file-gif](./media/gifs/filter-gif.gif)
+![search-file-gif](../d_excel/media/gifs/search-gif.gif)
+<br>
+
+<h3>Search</h3>
+<br>
+![filter-file-gif](../d_excel/media/gifs/filter-gif.gif)
 <br>
 
 ## Library Dependency
