@@ -9,7 +9,6 @@ def file_window(data, headings, dictionary):
     search_data = util.searchFunctions(dictionary)
     table_dict = dictionary
 
-
     font = ("Arial", 12)
     table_value = data
 

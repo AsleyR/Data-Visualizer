@@ -26,4 +26,5 @@ class csvData:
             for line in csv_reader:
                 data.append(line)
             csv_file.close() # Remember to always close files
+            
             return data
