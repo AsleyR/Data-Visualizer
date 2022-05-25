@@ -33,15 +33,15 @@ At the moment, this program can only read data from .csv files, so, it is not ve
 
 ![open-file-gif](./media/gifs/open-gif.gif)
 <br>
-- Display data
+<h3>Display data</h3>
 
 ![search-file-gif](./media/gifs/search-gif.gif)
 <br>
-- Search
+<h3>Search</h3>
 
 ![filter-file-gif](./media/gifs/filter-gif.gif)
 <br>
-- Filter
+<h3>Search</h3>
   
 <br>
 
