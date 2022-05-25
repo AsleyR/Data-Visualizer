@@ -48,7 +48,7 @@ A simple python program that visualizes data from a .csv file. It uses the libra
 
 Data visualizer requires the PySimpleGui library to run.
 
-Install the library by using the following code in the console:
+Install the library by using the following command in the console:
 
 ```sh
 pip install PySimpleGUI
