@@ -1,7 +1,4 @@
-import PySimpleGUI as sg
-import os.path
 import winds
-import util
 
 # Create Windows
 main_window = winds.main_window
@@ -17,12 +14,12 @@ while True:
     event_main = main_window()
 
     if event_main[0] == "EXIT":
-        print('Exiting loop')
+        print('EXISTING LOOP - CLOSING PROGRAM!')
         break
 
     # I HATE these nested functions, but it works >:(    
     elif event_main[0] == "Open Window":
-        print('Opening File Window')
+        print('OPENING FILE WINDOW')
         # set data values
         csv_data = event_main[1]
         csv_headings = event_main[2]
@@ -31,10 +28,6 @@ while True:
         event_file = file_window(csv_data, csv_headings, csv_data_dict)
 
         if event_file[0] == "EXIT":
-            print('Exiting loop and closing file window')
+            print('EXITING LOOP - CLOSING FILE WINDOW')
             break
-
-        if event_file[0] == "CLICK ME":
-            print('EVENT EXECUTED!')
-            pass
         pass

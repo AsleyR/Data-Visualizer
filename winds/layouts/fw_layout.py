@@ -1,5 +1,4 @@
 import PySimpleGUI as sg
-from util import csv_data
 
 class fileWindowLayout:
     def create_layout(self, data, headings, dictionary):
@@ -29,7 +28,6 @@ class fileWindowLayout:
 
         combobox_value = ["No Selection"]
         combobox_value.extend(headings)
-        print(f"executing: {combobox_value}")
 
 
         filter_selection = [

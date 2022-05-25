@@ -23,7 +23,6 @@ class searchFunctions:
                 search = re.search(search_value, data[i]) # Regex search
                 if search:
                     item_list.append(data[i])
-        print(item_list)
         return item_list
 
     # Returns only 1 iteration of item in list
@@ -63,13 +62,9 @@ def busqueda_prubea(data, search_item, *, search_param=""):
     else:
         for i in range(len(data)):
             for value in data[i]:
-                print(value)
                 search = re.search(search_item, value)
                 if search:
                     item_list.append(data[i])
-                    # print(data[i])
-
-    print(item_list)
     return item_list
 
 # Take list of dicts and searchs for a specific param
@@ -79,60 +74,21 @@ def busqueda_prubea(data, search_item, *, search_param=""):
 # ex 2: {'is_potato': 'yes'} -> search 'yes' in 'is_potato' 
 def busqueda_dos_dict(data, search_param, header_param=""):
     item_list = []
-    # if type(header_param) == str:
-    #     raise ValueError("'header_param' must be a string!")
-
-    # if header_param == "":
-    #     for i in range(len(data)):
-    #         for value in data[i]:
-    #             search = re.search(search_param, value)
-    #             if search:
-    #                 item_list.append(data[i])
-    #     return item_list
-
     if header_param == "":
         for i in range(len(data)):
             for value in data[i].values():
-                # print(value)
                 search = re.search(search_param, value)
                 if search:
                     item_list.append(data[i])
-        print(item_list)
 
     else:
         for i in range(len(data)):
             for key in data[i].keys():
                 if key == header_param:
-                    print(key)
                     value = data[i].get(key)
                     search = re.search(search_param, value)
                     if search:
                         item_list.append(data[i])
-                else:
-                    pass
-        print(item_list)
         return
 
-prueba = [
-    {'\ufeffId Cliente': '4200', 'Cliente': 'REDCAMIF - J0810000136761', 'Id vendedor': '25', 'Vendedor': 'Ana Flores Rodriguez', 'Id producto': '30228392', 'Producto': 'Toa Scott airflex MF 1P 25x1x150 hjs.', 'Cantidad': '25', 'Venta': '1607', 'Mes': 'Apr-22'}, {'\ufeffId Cliente': '4204', 'Cliente': 'CREACIONES GARCIA ROMERO', 'Id vendedor': '33', 'Vendedor': 'Massiel Rivera Herrera', 'Id producto': '30223334', 'Producto': 'Kcp Pap Hig JRT Scott Exp 1P 6x1x400 mts.', 'Cantidad': '6', 'Venta': '547.98', 'Mes': 'Apr-22'}
-]
-
-mier = ['1', '2', '3', '4']
-
-potato = [['4200', 'REDCAMIF - J0810000136761', '25', 'Ana Flores Rodriguez', '30228392', 'Toa Scott airflex MF 1P 25x1x150 hjs.', '25', '1607', 'Apr-22'], ['4204', 'CREACIONES GARCIA ROMERO', '33', 'Massiel Rivera Herrera', '30223334', 'Kcp Pap Hig JRT Scott Exp 1P 6x1x400 mts.', '6', '547.98', 'Apr-22'], ['he', 'ha', 'potato']]
-
-# search = busqueda_prubea(potato, 'potato')
-# print(search.search_item('4200'))
-
-fit = []
-# print(prueba[0].items())
-
-# mpro = [1, 2, 3]
-# pore = ['f', 'e', '3']
-# fetulencia = dict(mpro = pore)
-# print(fetulencia)
-
-# busqueda_dos_dict(prueba, "REDCAMIF", 'Cliente')
-# print(len(fit)
-# print(search)
 

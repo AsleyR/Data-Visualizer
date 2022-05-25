@@ -22,6 +22,7 @@ def main_window():
         event, values = window.read()
         if event == "EXIT" or event == sg.WINDOW_CLOSED:
             event_list = ['EXIT']
+            print('EXITING MAIN WINDOW')
             window.close()
             return event_list
 
@@ -30,6 +31,7 @@ def main_window():
             folder = values['-FOLDER-']
             try:
                 file_list = os.listdir(folder)
+                print('FOLDER FOUND SUCCESFULLY')
         
             except:
                 file_list = []
@@ -66,6 +68,7 @@ def main_window():
                 window["-OPEN FILE-"].update(visible=True)
                 event_list = ["-FILE LIST-", csv_data, csv_headings, csv_data_dict]
                 # return event_list
+                print('FILE SUCCESFULLY SELECTED')
                 pass
 
             # Error selecting file. Horrible except usage tho lmao
@@ -76,10 +79,12 @@ def main_window():
                     )
                 error_sound = AudioSegment.from_wav("media/audio/computer-error.wav")
                 play(error_sound)
+                print('ERROR SELECTING FILE')
                 pass
             
         elif event == "-OPEN FILE-":
             event_list = ["Open Window", csv_data, csv_headings, csv_data_dict]
+            print('CLOSING MAIN WINDOW - OPENING FILE WINDOW')
             window.close()
             return event_list
 

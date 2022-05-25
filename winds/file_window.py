@@ -21,6 +21,7 @@ def file_window(data, headings, dictionary):
         event, values = window.read()
         if event == "EXIT" or event == sg.WIN_CLOSED:
             event_list = "EXIT"
+            print('EXITING FILE WINDOW')
             window.close()
             return event_list
 
@@ -41,10 +42,10 @@ def file_window(data, headings, dictionary):
                 window["-SHOW COMBOBOX-"].update(
                     values=[], visible=False)
                 window["-DATA TABLE-"].update(values=table_value)
+                print('RESETING TABLE VALUES')
             window.refresh()
         
         elif event == "-SHOW COMBOBOX-":
-            print('Executing')
             show_value = values["-SHOW COMBOBOX-"]
             delimiter = values["-FILTER-"]
 
@@ -52,7 +53,7 @@ def file_window(data, headings, dictionary):
             table_value = util.convert_dict_to_list(table_dict, with_keys=False)
             
             window["-DATA TABLE-"].update(values=table_value)
-            print(len(table_value))
+            print('FILTERING')
 
         elif event == "Search":
             search_input = values["-SEARCH-"]
@@ -64,6 +65,7 @@ def file_window(data, headings, dictionary):
 
             window["-DATA TABLE-"].update(values=search_result)
             window["-SEARCH RESULT TEXT-"].update(f'{len(search_result)} results', visible=True)
+            print('SEARCHING')
 
         elif event == "Reset":
             window["-SEARCH-"].update('')

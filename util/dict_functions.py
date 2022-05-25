@@ -5,7 +5,6 @@ def convert_dict_to_list(dict_list, *, with_keys=False):
         raise ValueError(f"'with_keys' must be a boolean")
 
     result_list = []
-
     for iteration in range(len(dict_list)):
         item_list = []
         if with_keys == True:
@@ -17,7 +16,6 @@ def convert_dict_to_list(dict_list, *, with_keys=False):
                 item_list.append(value)
 
         result_list.append(item_list)
-    print(result_list)
     return result_list
 
 # Take list of dicts and outputs only desired dicts
@@ -49,17 +47,6 @@ def get_dict_values(dictionary):
         values.append(value_list)
     return values
 
-
-def test_function(dict, *, with_headings: bool = False):
-    if type(with_headings) != bool:
-        raise ValueError("'with_headings' argument must be a boolean")
-    
-    if with_headings != False:
-        print("Yes")
-    else:
-        print("No")
-    print(dict)
-
 # DISGUSTING FUNCTION, CHANGE NEEDED!
 def search_dict(data, search_item, search_param=''):
     item_list = []
@@ -70,48 +57,15 @@ def search_dict(data, search_item, search_param=''):
                 search = re.search(search_item, value, re.IGNORECASE)
                 if search:
                     item_list.append(data[i])
-        print(item_list)
 
     else:
         for i in range(len(data)):
             for key in data[i].keys():
                 if key == search_param:
-                    print(key)
                     value = data[i].get(key)
                     search = re.search(search_item, value, re.IGNORECASE)
                     if search:
                         item_list.append(data[i])
                 else:
                     pass
-        print(item_list)
     return item_list
-
-
-ed = {
-    "Color": "Blanco",
-    "Brand": "SAMSUNG",
-    "Size": "20",
-    "Tech": "Good"
-}
-
-ed1 = {
-    "Color": "Negro",
-    "Brand": "Huawei",
-    "Size": "15",
-    "Tech": "Bad"
-}
-
-prueba = [
-    {'\ufeffId Cliente': '4200', 'Cliente': 'REDCAMIF - J0810000136761', 'Id vendedor': '25', 'Vendedor': 'Ana Flores Rodriguez', 'Id producto': '30228392', 'Producto': 'Toa Scott airflex MF 1P 25x1x150 hjs.', 'Cantidad': '25', 'Venta': '1607', 'Mes': 'Apr-22'}, {'\ufeffId Cliente': '4204', 'Cliente': 'CREACIONES GARCIA ROMERO', 'Id vendedor': '33', 'Vendedor': 'Massiel Rivera Herrera', 'Id producto': '30223334', 'Producto': 'Kcp Pap Hig JRT Scott Exp 1P 6x1x400 mts.', 'Cantidad': '6', 'Venta': '547.98', 'Mes': 'Apr-22'}
-]
-
-ed3 = [ed, ed1]
-
-new_d = {}
-
-# mierda = get_desired_dicts(ed3, "Color")
-# # print(mierda)
-# convert_dict_to_list(prueba, with_keys=False)
-# search_dict(prueba, "red", 'Cliente')
-
-# test_function(ed)
