@@ -1,9 +1,12 @@
-<h1>data_visualizer</h1>
-<h4>V. 1.0.1</h4>
+<h1>Data Visualizer</h1>
+<h3>V. 1.0.1</h3>
 
-<a href="https://github.com/AsleyR/data_visualizer">
-    <img src="https://github.com/AsleyR/data_visualizer/blob/bug-fixing/media/images/ICONS/data_tool_icon.png" />
-</a>
+<h4 align='center'>
+    <a href="https://github.com/AsleyR/data_visualizer">
+        <img src="https://github.com/AsleyR/data_visualizer/blob/bug-fixing/media/images/data_visualizer_title.png"
+        alt="data-visualizer"/>
+    </a>
+</h4>
 
 <br>
 
@@ -57,7 +60,7 @@ Data visualizer supports the following types of files:
 
 ## Changelog
 
-[> Read the changelog here ->](changelog.md)
+[❯ Read the changelog here →](changelog.md) 📄
 
 <br>
 
