@@ -32,6 +32,7 @@ At the moment, this program can only read data from .csv files, so, it is not ve
 ## Features
 
 - 📊 Display data
+![open-file-gif](./media/gifs/open-gif.gif)
 - 🔎 Search and filter features
   
 <br>
