@@ -32,13 +32,16 @@ At the moment, this program can only read data from .csv files, so, it is not ve
 ## Features
 
 ![open-file-gif](./media/gifs/open-gif.gif)
-Display data
+<br>
+- Display data
 
 ![search-file-gif](./media/gifs/search-gif.gif)
-Search
+<br>
+- Search
 
 ![filter-file-gif](./media/gifs/filter-gif.gif)
-Filter
+<br>
+- Filter
   
 <br>
 
