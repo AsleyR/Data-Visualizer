@@ -8,7 +8,7 @@ All notable changes in this project's [released versions](../../releases) are do
 
 <br>
 
-![hr](https://../media/images/hr.png)
+![hr](https://github.com/AsleyR/data_visualizer/blob/main/media/images/hr.png)
 
 <br>
 
@@ -30,9 +30,9 @@ All notable changes in this project's [released versions](../../releases) are do
 
 > 📖 Readme [`43e3557`](https://github.com/AsleyR/data_visualizer/commit/43e3557ac1b0fef1b4351c19e3311538edcd8c49) <br>
 
-> 📖 Changelog [``] <br>
+> 📖 Changelog [`c43b748`](https://github.com/AsleyR/data_visualizer/commit/c43b748bfba17076e0bfe3f940eb7875517faf2f) <br>
 
-![hr](https://../media/images/hr.png)
+![hr](https://github.com/AsleyR/data_visualizer/blob/main/media/images/hr.png)
 
 <br>
 
