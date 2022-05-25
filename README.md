@@ -3,6 +3,8 @@
         <img src="https://github.com/AsleyR/data_visualizer/blob/bug-fixing/media/images/data_visualizer_title.png"
         alt="data-visualizer"/>
     </a>
+    <br>
+    <br>
     V. 1.0.1
 </h4>
 
