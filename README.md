@@ -50,7 +50,7 @@ At the moment, this program can only read data from .csv files, so, it is not ve
 
 Data visualizer requires the PySimpleGui library to run.
 
-Install the library using the following code in the console.
+Install the library by using the following code in the console:
 
 ```sh
 pip install PySimpleGUI
@@ -77,3 +77,5 @@ Data visualizer supports the following types of files:
 ## License
 
 MIT License
+
+[❯ Read the license here →](LICENSE.md) 🔏
