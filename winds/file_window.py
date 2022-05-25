@@ -12,7 +12,7 @@ def file_window(data, headings, dictionary):
     font = ("Arial", 12)
     table_value = data
 
-    window = sg.Window('Data Table', file_w_layout, font, finalize=True)
+    window = sg.Window('Data Visualizer', file_w_layout, font, finalize=True)
 
     # table = window["-DATA TABLE-"]
     # table.bind('<Button-1>', "Click")
@@ -27,8 +27,9 @@ def file_window(data, headings, dictionary):
         elif event == "-FILTER-":
             filter_selection = values["-FILTER-"]
             if filter_selection != "No Selection":
-                combobox_value = ["No Selection"] + search_data.get_all_specific_items(filter_selection)
+                combobox_value = search_data.get_all_specific_items(filter_selection)
                 combobox_value.sort()
+                combobox_value.insert(0, 'No selection')
 
                 window["-SHOW ONLY-"].update(visible=True)
                 window["-SHOW COMBOBOX-"].update(
@@ -62,7 +63,7 @@ def file_window(data, headings, dictionary):
             search_result = util.convert_dict_to_list(search_dict, with_keys=False)
 
             window["-DATA TABLE-"].update(values=search_result)
-            window["-SEARCH RESULT TEXT-"].update(f'{len(search_result)} resultados', visible=True)
+            window["-SEARCH RESULT TEXT-"].update(f'{len(search_result)} results', visible=True)
 
         elif event == "Reset":
             window["-SEARCH-"].update('')

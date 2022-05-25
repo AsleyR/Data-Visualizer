@@ -4,14 +4,14 @@ class mainWindowLayout:
     def create_layout(self):
         sg.theme('SystemDefault')
         header = [
-            sg.Text('Herramienta de Datos', font=('Arial', 25)),
+            sg.Text('Data Visualizer', font=('Arial', 25)),
         ]
 
         file_selection = [
             [
                 sg.Text('Open File'),
                 sg.In(size=(25,1), enable_events=True, key="-FOLDER-"),
-                sg.FolderBrowse('Abrir'),
+                sg.FolderBrowse('Open'),
             ],
             [sg.Text('', key="-FILE STATUS-")]
         ]

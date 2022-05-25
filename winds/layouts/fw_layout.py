@@ -10,7 +10,7 @@ class fileWindowLayout:
         d_value = data
 
         header = [
-            sg.Text('Visualizador de Datos', font=('Arial', 25),
+            sg.Text('Data Visualizer', font=('Arial', 25),
             justification='center')
         ]
 
@@ -34,7 +34,7 @@ class fileWindowLayout:
 
         filter_selection = [
             [
-                sg.Text('Buscar en:'),
+                sg.Text('Search in:'),
                 sg.Combo(
                     headings, enable_events=True,
                     key="-SEARCH FILTER-"
@@ -49,12 +49,12 @@ class fileWindowLayout:
             ],
             [sg.Text('', enable_events=True, key="-FILTER STATUS-")],
             [
-                sg.Text('Filtrar por:'),
+                sg.Text('Filter by:'),
                 sg.Combo(
                     combobox_value, 
                     enable_events=True, key="-FILTER-"
                     ),
-                sg.Text('Mostrar solo: ', visible=False, key="-SHOW ONLY-"),
+                sg.Text('Show only: ', visible=False, key="-SHOW ONLY-"),
                 sg.Combo(
                     [], 
                     size=(25,1),
@@ -67,7 +67,7 @@ class fileWindowLayout:
         ]
 
         layout = [
-            header,
+            # header,
             data_table,
             filter_selection,
         ]
