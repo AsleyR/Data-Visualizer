@@ -22,6 +22,9 @@ At the moment, this program can only read data from .csv files, so, it is not ve
 - [Project Description](#project-description)
 - [Table of Contents](#table-of-contents)
 - [Features](#features)
+  - [Display data](#display-data)
+  - [Search data](#search-data)
+  - [Filter data](#filter-data)
 - [Library Dependency](#library-dependency)
 - [File Support](#file-support)
 - [Changelog](#changelog)
@@ -31,13 +34,15 @@ At the moment, this program can only read data from .csv files, so, it is not ve
 
 ## Features
 
+### Display data
 ![open file gif](https://github.com/AsleyR/data_visualizer/blob/bug-fixing/media/gifs/open-gif.gif)
 <br>
 
+### Search data
 ![search file gif](https://github.com/AsleyR/data_visualizer/blob/bug-fixing/media/gifs/search-gif.gif)
 <br>
 
-
+### Filter data
 ![filter file gif](https://github.com/AsleyR/data_visualizer/blob/bug-fixing/media/gifs/filter-gif.gif)
 <br>
 
