@@ -2,27 +2,37 @@
 ### V. 1.0.1
 
 
-![N|Solid](../media/images/data_tool_icon.png)
+[../media/images/data_tool_icon.png]
 
+<br>
 
 # Project Description
 A simple python program that visualizes data from a .csv file. It uses the library PySimpleGui for its GUI. By the way, some parts of the program are in spanish due to me testing stuff and being lazy to write it on english. This is temporary.
 
 At the moment, this program can only read data from .csv files, so, it is not very useful to be honest. Nonetheless, I plan to allow the program to read data from other types of files and from databases.
 
+<br>
 
 ## Table of Contents
 
-[Features](#features)
-[Library Dependecy](#library-dependency)
-[File Support](#file-support)
-[License](#license)
+- [data_visualizer](#data_visualizer)
+    - [V. 1.0.1](#v-101)
+- [Project Description](#project-description)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Library Dependency](#library-dependency)
+  - [File Support](#file-support)
+  - [License](#license)
+
+<br>
 
 ## Features
 
 
 - Display data
 - Search and filter features
+  
+<br>
 
 ## Library Dependency
 
@@ -34,6 +44,7 @@ Install the library using the following code in the console.
 pip install PySimpleGUI
 ```
 
+<br>
 
 ## File Support
 
@@ -43,6 +54,7 @@ Data visualizer supports the following types of files:
 | --------- | ------- |
 | .csv | ✅ |
 
+<br>
 
 ## License
 
