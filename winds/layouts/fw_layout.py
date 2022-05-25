@@ -29,6 +29,10 @@ class fileWindowLayout:
         combobox_value = ["No Selection"]
         combobox_value.extend(headings)
 
+        error_text = [
+            [sg.Text('', enable_events=True, text_color='red', key="-ERROR MESSAGE-")]
+        ]
+
 
         filter_selection = [
             [
@@ -67,6 +71,7 @@ class fileWindowLayout:
         layout = [
             # header,
             data_table,
+            error_text,
             filter_selection,
         ]
 

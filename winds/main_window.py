@@ -11,6 +11,8 @@ def main_window():
     main_layout = main_layout.create_layout()
     font = ("Arial", 12)
 
+    ERROR_SOUND = "media/audio/computer-error.wav"
+
     csv_data = []
     csv_data_dict = {}
     csv_headings = []
@@ -35,6 +37,13 @@ def main_window():
         
             except:
                 file_list = []
+                window["-FILE STATUS-"].update(
+                    'ERROR FINDING FOLDER',
+                    text_color="red"
+                    )
+                error_sound = AudioSegment.from_wav(ERROR_SOUND)
+                play(error_sound)
+                print('ERROR FINDING FOLDER')
 
             fnames = [
                 f
@@ -74,10 +83,10 @@ def main_window():
             # Error selecting file. Horrible except usage tho lmao
             except:
                 window["-FILE STATUS-"].update(
-                    'Error selecting file',
+                    'ERROR SELECTING FILE',
                     text_color="red"
                     )
-                error_sound = AudioSegment.from_wav("media/audio/computer-error.wav")
+                error_sound = AudioSegment.from_wav(ERROR_SOUND)
                 play(error_sound)
                 print('ERROR SELECTING FILE')
                 pass
