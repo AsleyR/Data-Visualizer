@@ -32,6 +32,8 @@ All notable changes in this project's [released versions](../../releases) are do
 
 > 📖 Changelog [`c43b748`](https://github.com/AsleyR/data_visualizer/commit/c43b748bfba17076e0bfe3f940eb7875517faf2f) <br>
 
+<br>
+
 ![hr](https://github.com/AsleyR/data_visualizer/blob/main/media/images/hr.png)
 
 <br>
