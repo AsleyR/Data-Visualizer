@@ -11,7 +11,7 @@
 <br>
 
 ## Project Description
-A simple python program that visualizes data from a .csv file. It uses the library PySimpleGui for its GUI. By the way, some parts of the program are in spanish due to me testing stuff and being lazy to write it on english. This is temporary.
+A simple python program that visualizes data from a .csv file. It uses the library PySimpleGui for its GUI.
 
 At the moment, this program can only read data from .csv files, so, it is not very useful to be honest. Nonetheless, I plan to allow the program to read data from other types of files and from databases.
 
@@ -31,17 +31,14 @@ At the moment, this program can only read data from .csv files, so, it is not ve
 
 ## Features
 
-<h3>Display data</h3>
 <br>
 ![open file gif](https://github.com/AsleyR/data_visualizer/blob/bug-fixing/media/gifs/open-gif.gif)
 <br>
 
-<h3>Search</h3>
 <br>
 ![search file gif](https://github.com/AsleyR/data_visualizer/blob/bug-fixing/media/gifs/search-gif.gif)
 <br>
 
-<h3>Filter</h3>
 <br>
 ![filter file gif](https://github.com/AsleyR/data_visualizer/blob/bug-fixing/media/gifs/filter-gif.gif)
 <br>
