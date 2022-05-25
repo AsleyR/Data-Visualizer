@@ -31,15 +31,13 @@ At the moment, this program can only read data from .csv files, so, it is not ve
 
 ## Features
 
-<br>
 ![open file gif](https://github.com/AsleyR/data_visualizer/blob/bug-fixing/media/gifs/open-gif.gif)
 <br>
 
-<br>
 ![search file gif](https://github.com/AsleyR/data_visualizer/blob/bug-fixing/media/gifs/search-gif.gif)
 <br>
 
-<br>
+
 ![filter file gif](https://github.com/AsleyR/data_visualizer/blob/bug-fixing/media/gifs/filter-gif.gif)
 <br>
 
