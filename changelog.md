@@ -20,7 +20,7 @@ All notable changes in this project's [released versions](../../releases) are do
 
 ![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
 
-> 👌 Improve File Window Layout [`c450868`](https://github.com/AsleyR/data_visualizer/commit/c450868d6230b6e5d34491deda5a2656a1702cc2) <br>
+> 👌 Modified File Window Layout [`c450868`](https://github.com/AsleyR/data_visualizer/commit/c450868d6230b6e5d34491deda5a2656a1702cc2) <br>
 
 > 👌 Simple Exception Handle [`94769b9`](https://github.com/AsleyR/data_visualizer/commit/94769b9f3683a42c69d497bc3bc53240f8b37f26) <br>
 
