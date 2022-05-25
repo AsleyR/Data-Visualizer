@@ -15,7 +15,7 @@ def main_window():
     csv_data_dict = {}
     csv_headings = []
 
-    window = sg.Window("Data Tool", main_layout, font=font)
+    window = sg.Window("Data Visualizer", main_layout, font=font)
 
     # Event loop
     while True:
@@ -60,7 +60,7 @@ def main_window():
                 csv_data_dict = data_dict
 
                 window["-FILE STATUS-"].update(
-                    'Archivo seleccionado con éxito',
+                    'File succesfully selected',
                     text_color="green"
                     )
                 window["-OPEN FILE-"].update(visible=True)
@@ -71,7 +71,7 @@ def main_window():
             # Error selecting file. Horrible except usage tho lmao
             except:
                 window["-FILE STATUS-"].update(
-                    'Error selecionando archivo',
+                    'Error selecting file',
                     text_color="red"
                     )
                 error_sound = AudioSegment.from_wav("media/audio/computer-error.wav")
