@@ -1,11 +1,9 @@
-<h1>Data Visualizer</h1>
-<h3>V. 1.0.1</h3>
-
 <h4 align='center'>
     <a href="https://github.com/AsleyR/data_visualizer">
         <img src="https://github.com/AsleyR/data_visualizer/blob/bug-fixing/media/images/data_visualizer_title.png"
         alt="data-visualizer"/>
     </a>
+    V. 1.0.1
 </h4>
 
 <br>
