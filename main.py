@@ -1,7 +1,4 @@
-import PySimpleGUI as sg
-import os.path
 import winds
-import util
 
 # Create Windows
 main_window = winds.main_window

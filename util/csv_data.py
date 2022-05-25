@@ -1,5 +1,4 @@
 import csv
-import re
 
 # Id Cliente,Cliente,Id vendedor,Vendedor,Id producto,Producto,Cantidad,Venta,Mes
 

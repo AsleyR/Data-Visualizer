@@ -1,5 +1,4 @@
 import PySimpleGUI as sg
-from util import csv_data
 
 class fileWindowLayout:
     def create_layout(self, data, headings, dictionary):
