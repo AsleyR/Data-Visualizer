@@ -28,8 +28,9 @@ def file_window(data, headings, dictionary):
             window.close()
             return event_list
 
-        elif event == "-FILTER-":
-            filter_selection = values["-FILTER-"]
+        # * FILTER BY SECTION *
+        elif event == "-FILTER COMBOBOX-":
+            filter_selection = values["-FILTER COMBOBOX-"]
             try:
                 if filter_selection != "No Selection":
                     combobox_value = search_data.get_all_specific_items(filter_selection)
@@ -49,7 +50,8 @@ def file_window(data, headings, dictionary):
                     print('RESETING TABLE VALUES')
                 window.refresh()
             except:
-                window["-ERROR MESSAGE-"].update('ERROR WITH FILTER COMBOBOX - UNEXPECTED...')
+                window["-ERROR MESSAGE-"].update("ERROR WITH FILTER COMBOBOX - CLICK 'RESTART' BUTTON!")
+                window["-FILTER RESET-"].update(visible=True)
                 error_sound = AudioSegment.from_wav(ERROR_SOUND)
                 play(error_sound)
                 print('ERROR WITH FILTER COMBOBOX')
@@ -58,7 +60,7 @@ def file_window(data, headings, dictionary):
         elif event == "-SHOW COMBOBOX-":
             try:
                 show_value = values["-SHOW COMBOBOX-"]
-                delimiter = values["-FILTER-"]
+                delimiter = values["-FILTER COMBOBOX-"]
 
                 table_dict = search_data.update_data(delimiter, show_value)
                 table_value = util.convert_dict_to_list(table_dict, with_keys=False)
@@ -66,12 +68,26 @@ def file_window(data, headings, dictionary):
                 window["-DATA TABLE-"].update(values=table_value)
                 print('FILTERING')
             except:
-                window["-ERROR MESSAGE-"].update('ERROR FILTERING DATA - RESTART PROGRAM?')
+                window["-ERROR MESSAGE-"].update("ERROR FILTERING DATA - CLICK 'RESET' BUTTON!")
+                window["-FILTER RESET-"].update(visible=True)
                 error_sound = AudioSegment.from_wav(ERROR_SOUND)
                 play(error_sound)
                 print('ERROR FILTERING DATA')
                 pass
+        
+        elif event == "-FILTER RESET-":
+            try:
+                window['-FILTER RESET-'].update(visible=False)
+                window['-ERROR MESSAGE-'].update('')
+                pass
+            except:
+                window["-ERROR MESSAGE-"].update("ERROR RESETING DATA - RESTART PROGRAM!")
+                error_sound = AudioSegment.from_wav(ERROR_SOUND)
+                play(error_sound)
+                print('ERROR SEARCHING DATA')
+                pass
 
+        # * SEARCH SECTION *
         elif event == "Search":
             try:
                 search_input = values["-SEARCH-"]
@@ -91,8 +107,9 @@ def file_window(data, headings, dictionary):
                 print('ERROR SEARCHING DATA')
                 pass
 
-        elif event == "Reset":
+        elif event == "-SEARCH RESET-":
             try:
+                window["-ERROR MESSAGE-"].update('')
                 window["-SEARCH-"].update('')
                 window["-DATA TABLE-"].update(values=table_value)
                 window["-SEARCH RESULT TEXT-"].update('', visible=False)

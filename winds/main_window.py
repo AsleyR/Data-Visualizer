@@ -11,7 +11,7 @@ def main_window():
     main_layout = main_layout.create_layout()
     font = ("Arial", 12)
 
-    ERROR_SOUND = "media/audio/computer-error.wav"
+    ERROR_SOUND = "./media/audio/computer-error.wav"
 
     csv_data = []
     csv_data_dict = {}
@@ -92,10 +92,20 @@ def main_window():
                 pass
             
         elif event == "-OPEN FILE-":
-            event_list = ["Open Window", csv_data, csv_headings, csv_data_dict]
-            print('CLOSING MAIN WINDOW - OPENING FILE WINDOW')
-            window.close()
-            return event_list
+            try:
+                event_list = ["Open Window", csv_data, csv_headings, csv_data_dict]
+                print('CLOSING MAIN WINDOW - OPENING FILE WINDOW')
+                window.close()
+                return event_list
+            except:
+                window["-FILE STATUS-"].update(
+                    'ERROR OPENING FILE',
+                    text_color="red"
+                    )
+                error_sound = AudioSegment.from_wav(ERROR_SOUND)
+                play(error_sound)
+                print('ERROR OPENING FILE')
+                pass
 
 
     window.close()

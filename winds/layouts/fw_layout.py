@@ -47,14 +47,15 @@ class fileWindowLayout:
                     key="-SEARCH RESULT TEXT-"
                     ),
                 sg.Button('Search', button_color='royal blue'),
-                sg.Button('Reset', size=(5,1), button_color='black')
+                sg.Button('Reset', size=(5,1), enable_events=True, 
+                button_color='black', key="-SEARCH RESET-")
             ],
             [sg.Text('', enable_events=True, key="-FILTER STATUS-")],
             [
                 sg.Text('Filter by:'),
                 sg.Combo(
                     combobox_value, 
-                    enable_events=True, key="-FILTER-"
+                    enable_events=True, key="-FILTER COMBOBOX-"
                     ),
                 sg.Text('Show only: ', visible=False, key="-SHOW ONLY-"),
                 sg.Combo(
@@ -64,7 +65,9 @@ class fileWindowLayout:
                     key="-SHOW COMBOBOX-"
                     ),
                 # sg.In(size=(25,1), enable_events=True, key="-FILTER-"),
-                sg.Text('')
+                sg.Button('Reset', size=(5,1), enable_events=True,
+                visible=False,
+                button_color='black', key="-FILTER RESET-")
             ]
         ]
 
