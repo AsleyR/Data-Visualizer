@@ -1,9 +1,10 @@
-experiment_stuff/
 todo.txt
-ASLEY/
+test.py
 test_2.py
 new_names.csv
-**/__pycache__
+experiment_stuff/
+ASLEY/
 data/
-
+**/__pycache__
 **/.DS_Store
+*.pyo
