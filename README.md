@@ -10,12 +10,12 @@
 
 <br>
 
-## Project Description
+# Project Description
 A simple python program that let you visualizes data from a `.csv` file. It uses the [PySimpleGui](https://github.com/PySimpleGUI) for its GUI. 
 
 At the moment, this program can only read data from `.csv` files, but in the future I plan on adding support for other types of files, and option to connect to a SQL database.
 
-## Table of Contents
+# Table of Contents
 
 - [Project Description](#project-description)
 - [Table of Contents](#table-of-contents)
@@ -25,28 +25,28 @@ At the moment, this program can only read data from `.csv` files, but in the fut
   - [Filter data](#filter-data)
 - [Dependencies](#dependencies)
   - [Pip installation (optional)](#pip-installation-optional)
-- [File Support](#file-support)
+  - [File Support](#file-support)
 - [Changelog](#changelog)
 - [License](#license)
 
-## Features
+# Features
 
-### Display data
+## Display data
 
-<img src="./media/gifs/open-gif.gif" width="400">
+<img src="./media/gifs/open-gif.gif" width="500">
 <br>
 
-### Search data
+## Search data
 
-<img src="./media/gifs/search-gif.gif" width="400">
+<img src="./media/gifs/search-gif.gif" width="500">
 <br>
 
-### Filter data
+## Filter data
 
-<img src="./media/gifs/filter-gif.gif" width="400">
+<img src="./media/gifs/filter-gif.gif" width="500">
 <br>
 
-## Dependencies
+# Dependencies
 
 Data visualizer requires the PySimpleGui library to run. You can install it with pip using the following command:
 
@@ -58,7 +58,7 @@ In the case that you don't have pip, scroll down a little bit to see how to inst
 
 ---
 
-### Pip installation (optional)
+## Pip installation (optional)
 
 Don't have pip? You can install it like this:
 
@@ -82,17 +82,17 @@ Data visualizer supports the following types of files:
 | File Type | Support |
 | --------- | ------- |
 | .csv | ✅ |
-| .json | 📅 |
+| .json | ❌ |
 | SQL | 📅 |
-| Mongodb | 📅 |
+| Mongodb | ❌ |
 
 Keywords: `✅ Yes`, `❌ No`, `📅 In the future`
 
-## Changelog
+# Changelog
 
-[❯ Read the changelog here →](changelog.md) 📄
+[❯ Read the changelog here →](CHANGELOG.md) 📄
 
-## License
+# License
 
 MIT License
 
