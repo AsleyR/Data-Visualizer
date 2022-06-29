@@ -24,8 +24,8 @@ At the moment, this program can only read data from `.csv` files, but in the fut
   - [Search data](#search-data)
   - [Filter data](#filter-data)
 - [Dependencies](#dependencies)
-- [Pip installation (optional)](#pip-installation-optional)
-  - [File Support](#file-support)
+  - [Pip installation (optional)](#pip-installation-optional)
+- [File Support](#file-support)
 - [Changelog](#changelog)
 - [License](#license)
 
@@ -58,7 +58,7 @@ In the case that you don't have pip, scroll down a little bit to see how to inst
 
 ---
 
-# Pip installation (optional)
+## Pip installation (optional)
 
 Don't have pip? You can install it like this:
 
@@ -75,7 +75,7 @@ py -m ensurepip
 ```
 Please note that the installation of pip in windows can sometimes be... _complicated_. If you are having problems making pip work, I recommend you [this video guide](https://youtu.be/c_qNC1lL4qA) on how to install it.
 
-## File Support
+# File Support
 
 Data visualizer supports the following types of files:
 
