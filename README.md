@@ -10,19 +10,20 @@
 
 <br>
 
-# Project Description
-A simple python program that let you visualizes data from a `.csv` file. It uses the [PySimpleGui](https://github.com/PySimpleGUI) for its GUI. 
+<h1> Project Description</h1>
 
-At the moment, this program can only read data from `.csv` files, but in the future I plan on adding support for other types of files, and option to connect to a SQL database.
+A simple python program that let you visualizes data from a `.csv` file. It uses the [PySimpleGui](https://github.com/PySimpleGUI) gui library for its GUI. 
 
-# Table of Contents
+At the moment, this program can only read data from `.csv` files, but in the future I plan on adding support for other filetypes, and an option to connect to a SQL or MongoDb database.
 
-- [Project Description](#project-description)
-- [Table of Contents](#table-of-contents)
+<h1> Table of Contents </h1>
+
 - [Features](#features)
   - [Display data](#display-data)
   - [Search data](#search-data)
   - [Filter data](#filter-data)
+- [Installation](#installation)
+    - [Install from source](#install-from-source)
 - [Dependencies](#dependencies)
   - [Pip installation (optional)](#pip-installation-optional)
 - [File Support](#file-support)
@@ -33,18 +34,48 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 
 ## Display data
 
+<div align="center">
 <img src="./media/gifs/open-gif.gif" width="500">
+</div>
 <br>
 
 ## Search data
 
+<div align="center">
 <img src="./media/gifs/search-gif.gif" width="500">
+</div>
+
 <br>
 
 ## Filter data
 
+<div align="center">
 <img src="./media/gifs/filter-gif.gif" width="500">
+</div>
+
 <br>
+
+---
+
+# Installation
+
+### Install from source
+
+1. Clone the repo into your local machine:
+
+<div align="center">
+<img src="./media/gifs/clone-repo.gif" width="500">
+</div>
+
+<br>
+
+2. Open the downloaded clone repo folder and run the `__main__.py` file with the following command:
+
+    ```python
+    python3 -m __main__.py
+    ```
+
+---
 
 # Dependencies
 
@@ -73,7 +104,7 @@ python3 -m ensurepip
 ```bash
 py -m ensurepip
 ```
-Please note that the installation of pip in windows can sometimes be... _complicated_. If you are having problems making pip work, I recommend you [this video guide](https://youtu.be/c_qNC1lL4qA) on how to install it.
+Please note that the installation of pip in windows can sometimes be... _complicated_. If you are having problems making pip work, I recommend you this [video guide](https://youtu.be/c_qNC1lL4qA) on how to install it.
 
 # File Support
 
