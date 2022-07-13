@@ -1,5 +1,5 @@
 <h4 align='center'>
-      <img src="./media/images/Data-V-Logo-500-200.png"/>
+      <img src="./media/images/Data-V-Logo-500-200.png" alt="Project logo"/>
     <br>
     <br>
     V. 0.1.1
@@ -32,14 +32,14 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 ## Display data
 
 <div align="center">
-<img src="./media/gifs/open-gif.gif" width="500">
+<img src="./media/gifs/open-gif.gif" width="500" alt="gif-display-data">
 </div>
 <br>
 
 ## Search data
 
 <div align="center">
-<img src="./media/gifs/search-gif.gif" width="500">
+<img src="./media/gifs/search-gif.gif" width="500" alt="gif-search-data">
 </div>
 
 <br>
@@ -47,7 +47,7 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 ## Filter data
 
 <div align="center">
-<img src="./media/gifs/filter-gif.gif" width="500">
+<img src="./media/gifs/filter-gif.gif" width="500" alt="gif-filter-data">
 </div>
 
 <br>
@@ -61,7 +61,7 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 1. Clone the repo into your local machine:
 
 <div align="center">
-<img src="./media/gifs/clone-repo.gif" width="500">
+<img src="./media/gifs/clone-repo.gif" width="500" alt="gif-clone-repo">
 </div>
 
 <br>
