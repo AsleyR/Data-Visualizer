@@ -1,5 +1,5 @@
 <h4 align='center'>
-      <img src="./media/images/Data%20V%20Logo%20500-200.png"/>
+      <img src="./media/images/Data-V-Logo-500-200.png"/>
     <br>
     <br>
     V. 0.1.1
