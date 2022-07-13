@@ -1,8 +1,5 @@
 <h4 align='center'>
-    <a href="https://github.com/AsleyR/data_visualizer">
-        <img src="./media/images/data_visualizer_title.png"
-        alt="data-visualizer"/>
-    </a>
+      <img src="./media/images/Data%20V%20Logo%20500-200.png"/>
     <br>
     <br>
     V. 0.1.1
@@ -69,7 +66,7 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 
 <br>
 
-2. Open the downloaded clone repo folder and run the `__main__.py` file with the following command:
+2. Open the downloaded repo folder and run the `__main__.py` file with the following command:
 
     ```python
     python3 -m __main__.py
@@ -117,7 +114,7 @@ Data visualizer supports the following types of files:
 | SQL | 📅 |
 | Mongodb | ❌ |
 
-Keywords: `✅ Yes`, `❌ No`, `📅 In the future`
+Keywords: `✅ Yes`, `❌ No`, `📅 work in progress`
 
 # Changelog
 
