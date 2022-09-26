@@ -41,8 +41,11 @@ def main_window():
                     'ERROR FINDING FOLDER',
                     text_color="red"
                     )
-                error_sound = AudioSegment.from_wav(ERROR_SOUND)
-                play(error_sound)
+                try:
+                    error_sound = AudioSegment.from_wav(ERROR_SOUND)
+                    play(error_sound)
+                except:
+                    pass
                 print('ERROR FINDING FOLDER')
 
             fnames = [
@@ -86,8 +89,11 @@ def main_window():
                     'ERROR SELECTING FILE',
                     text_color="red"
                     )
-                error_sound = AudioSegment.from_wav(ERROR_SOUND)
-                play(error_sound)
+                try:
+                    error_sound = AudioSegment.from_wav(ERROR_SOUND)
+                    play(error_sound)
+                except:
+                    pass
                 print('ERROR SELECTING FILE')
                 pass
             
@@ -102,8 +108,11 @@ def main_window():
                     'ERROR OPENING FILE',
                     text_color="red"
                     )
-                error_sound = AudioSegment.from_wav(ERROR_SOUND)
-                play(error_sound)
+                try:
+                    error_sound = AudioSegment.from_wav(ERROR_SOUND)
+                    play(error_sound)
+                except:
+                    pass
                 print('ERROR OPENING FILE')
                 pass
 

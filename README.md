@@ -1,5 +1,5 @@
 <h4 align='center'>
-      <img src="./media/images/Data-V-Logo-500-200.png" alt="Project logo"/>
+      <img src="data-visualizer/media/images/Data-V-Logo-500-200.png" alt="Project logo"/>
     <br>
     <br>
     V. 0.1.1
@@ -9,7 +9,7 @@
 
 <h1> Project Description</h1>
 
-A simple python program that let you visualizes data from a `.csv` file. It uses the [PySimpleGui](https://github.com/PySimpleGUI) gui library for its GUI. 
+A python program that visualizes data from a `.csv` file. It uses the [PySimpleGui](https://github.com/PySimpleGUI) gui library for its GUI, and [PyDub](https://github.com/jiaaro/pydub/) for some simple error audio handling. 
 
 At the moment, this program can only read data from `.csv` files, but in the future I plan on adding support for other filetypes, and an option to connect to a SQL or MongoDb database.
 
@@ -24,6 +24,7 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 - [Dependencies](#dependencies)
   - [Pip installation (optional)](#pip-installation-optional)
 - [File Support](#file-support)
+- [Header bug](#header-bug)
 - [Changelog](#changelog)
 - [License](#license)
 
@@ -32,14 +33,14 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 ## Display data
 
 <div align="center">
-<img src="./media/gifs/open-gif.gif" width="500" alt="gif-display-data">
+<img src="data-visualizer/media/gifs/open-gif.gif" width="500" alt="gif-display-data">
 </div>
 <br>
 
 ## Search data
 
 <div align="center">
-<img src="./media/gifs/search-gif.gif" width="500" alt="gif-search-data">
+<img src="data-visualizer/media/gifs/search-gif.gif" width="500" alt="gif-search-data">
 </div>
 
 <br>
@@ -47,7 +48,7 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 ## Filter data
 
 <div align="center">
-<img src="./media/gifs/filter-gif.gif" width="500" alt="gif-filter-data">
+<img src="data-visualizer/media/gifs/filter-gif.gif" width="500" alt="gif-filter-data">
 </div>
 
 <br>
@@ -56,12 +57,14 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 
 # Installation
 
+If you want to test the program yourself, I recommend you visit the page [mockaroo](https://mockaroo.com/) to get some sample data in `.csv` format.
+
 ### Install from source
 
 1. Clone the repo into your local machine:
 
 <div align="center">
-<img src="./media/gifs/clone-repo.gif" width="500" alt="gif-clone-repo">
+<img src="data-visualizer/media/gifs/clone-repo.gif" width="500" alt="gif-clone-repo">
 </div>
 
 <br>
@@ -76,10 +79,14 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 
 # Dependencies
 
-Data visualizer requires the PySimpleGui library to run. You can install it with pip using the following command:
+Data visualizer requires the PySimpleGui and PyDub libraries to run. You can install them with pip using the following commands:
 
 ```shell
 pip install PySimpleGUI
+```
+
+```shell
+pip install pydub
 ```
 
 In the case that you don't have pip, scroll down a little bit to see how to install it.
@@ -115,6 +122,10 @@ Data visualizer supports the following types of files:
 | Mongodb | ❌ |
 
 Keywords: `✅ Yes`, `❌ No`, `📅 work in progress`
+
+# Header bug
+
+Currently, there's a bug where the first row of header-less `.csv` files appear messed up. The nature of bug makes it pretty difficult to fix, but with time, I think I'll be able to get it done. So, keep that in mind while working with files wihout a proper header.
 
 # Changelog
 
