@@ -1,6 +1,5 @@
 import winds
 
-
 def init_program():
     # Create Windows
     main_window = winds.main_window
@@ -35,6 +34,9 @@ def init_program():
                 break
             pass
 
+def main():
+    init_program()
+
 # Init script
 if __name__ == "__main__":
-    init_program();
+    main();

@@ -1,3 +1,4 @@
+from importlib.metadata import entry_points
 from setuptools import setup, find_packages
 import codecs
 import os
@@ -7,7 +8,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '0.1.2'
+VERSION = '0.1.3'
 DESCRIPTION = "'Python program that visualizes data from a .csv file.'"
 LONG_DESCRIPTION = ""
 
@@ -31,5 +32,10 @@ setup(
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
-    ]
+    ],
+    entry_points={
+        'console_scripts': [
+            'data-visualizer=data_visualizer.__main__:main',
+        ],
+    },
 )
