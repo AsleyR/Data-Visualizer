@@ -1,13 +1,14 @@
 import PySimpleGUI as sg
 import os.path
-import util
-import winds.layouts
-from pydub import AudioSegment
-from pydub.playback import play
+# import util
+# import winds.layouts
+from .layouts import mw_layout as ml
+from data_visualizer.util import csv_data as cd, dict_functions as df
+from data_visualizer.util.errorHandling import playErrorSound
 
 
 def main_window():
-    main_layout = winds.layouts.mainWindowLayout()
+    main_layout = ml.mainWindowLayout()
     main_layout = main_layout.create_layout()
     font = ("Arial", 12)
 
@@ -42,8 +43,7 @@ def main_window():
                     text_color="red"
                     )
                 try:
-                    error_sound = AudioSegment.from_wav(ERROR_SOUND)
-                    play(error_sound)
+                    playErrorSound()
                 except:
                     pass
                 print('ERROR FINDING FOLDER')
@@ -66,11 +66,11 @@ def main_window():
 
                 # Convert data from CSV file to a dict list
                 csv_file = filename
-                data_class= util.csvData(csv_file)
+                data_class= cd.csvData(csv_file)
                 data_dict = data_class.create_data_dict()
 
-                csv_data = util.get_dict_values(data_dict)
-                csv_headings = util.get_dict_keys(data_dict)
+                csv_data = df.get_dict_values(data_dict)
+                csv_headings = df.get_dict_keys(data_dict)
                 csv_data_dict = data_dict
 
                 window["-FILE STATUS-"].update(
@@ -90,8 +90,7 @@ def main_window():
                     text_color="red"
                     )
                 try:
-                    error_sound = AudioSegment.from_wav(ERROR_SOUND)
-                    play(error_sound)
+                    playErrorSound()
                 except:
                     pass
                 print('ERROR SELECTING FILE')
@@ -109,8 +108,7 @@ def main_window():
                     text_color="red"
                     )
                 try:
-                    error_sound = AudioSegment.from_wav(ERROR_SOUND)
-                    play(error_sound)
+                    playErrorSound()
                 except:
                     pass
                 print('ERROR OPENING FILE')

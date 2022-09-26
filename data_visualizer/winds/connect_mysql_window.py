@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-import winds.layouts
+# import winds.layouts
 
 def connect_mysql_window():
     c_mysql_layout = winds.layouts.connectMysqlWindow()

@@ -1,9 +1,10 @@
-import winds
+from .winds import main_window as mw
+from .winds import file_window as fw
 
 def init_program():
     # Create Windows
-    main_window = winds.main_window
-    file_window = winds.file_window
+    main_window = mw.main_window
+    file_window = fw.file_window
 
 
     # Program Controller
