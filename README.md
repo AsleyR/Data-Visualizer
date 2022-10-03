@@ -11,7 +11,7 @@
 
 A python program that visualizes data from a `.csv` file. It uses the [PySimpleGui](https://github.com/PySimpleGUI) gui library for its GUI, and [PyDub](https://github.com/jiaaro/pydub/) for some simple error audio handling. 
 
-At the moment, this program can only read data from `.csv` files, but in the future I plan on adding support for other filetypes, and an option to connect to a SQL or MongoDb database.
+At the moment, this program can only read data from `.csv` files, but in the future I plan on adding support for other filetypes, and an option to connect to a SQL or a MongoDb database.
 
 <h1> Table of Contents </h1>
 
@@ -20,8 +20,10 @@ At the moment, this program can only read data from `.csv` files, but in the fut
   - [Search data](#search-data)
   - [Filter data](#filter-data)
 - [Installation](#installation)
-    - [Install from source](#install-from-source)
-- [Dependencies](#dependencies)
+    - [Using pip](#using-pip)
+    - [From source](#from-source)
+- [Other](#other)
+  - [Dependencies](#dependencies)
   - [Pip installation (optional)](#pip-installation-optional)
 - [File Support](#file-support)
 - [Header bug](#header-bug)
@@ -59,7 +61,17 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 
 If you want to test the program yourself, I recommend you visit the page [mockaroo](https://mockaroo.com/) to get some sample data in `.csv` format.
 
-### Install from source
+### Using pip
+
+Data visualizer can be installed with pip. To do so, run the follow command:
+
+```
+pip install data-visualizer
+```
+
+### From source
+
+On the other hand, if you want to, you can also download the program from the repo. If you want to do so, follow these steps to do so.
 
 1. Clone the repo into your local machine:
 
@@ -69,17 +81,21 @@ If you want to test the program yourself, I recommend you visit the page [mockar
 
 <br>
 
-2. Open the downloaded repo folder and run the `__main__.py` file with the following command:
+  2. Open the cloned folder and run the `"data_visualizer"` folder as a module with the following command:
 
-    ```python
-    python3 -m __main__.py
-    ```
+  ```python
+  python3 -m data_visualizer
+  ```
 
 ---
 
-# Dependencies
+# Other
 
-Data visualizer requires the PySimpleGui and PyDub libraries to run. You can install them with pip using the following commands:
+## Dependencies
+
+By default, Data Visualizer's `setup.py` file was setup in a way that automatically downloads all the packages the program uses and depends of. However, if for some reason you want to install them yourself, Data Visualizer requires the PySimpleGui and PyDub libraries to work.
+
+You can install them with pip using the following commands:
 
 ```shell
 pip install PySimpleGUI
