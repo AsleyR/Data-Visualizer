@@ -63,7 +63,7 @@ If you want to test the program yourself, I recommend you visit the page [mockar
 
 ### Using pip
 
-Data visualizer can be installed with pip. To do so, run the follow command:
+Data visualizer can be installed with pip, along with all the program dependencies in the case they aren't installed. To do so, run the follow command:
 
 ```
 pip install data-visualizer
