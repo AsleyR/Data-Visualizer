@@ -22,6 +22,9 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 - [Installation](#installation)
     - [Using pip](#using-pip)
     - [From source](#from-source)
+- [Usage](#usage)
+  - [Pip](#pip)
+  - [Manually](#manually)
 - [Other](#other)
   - [Dependencies](#dependencies)
   - [Pip installation (optional)](#pip-installation-optional)
@@ -31,6 +34,8 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 - [License](#license)
 
 # Features
+
+If you want to test the program yourself, I recommend you visit the page [mockaroo](https://mockaroo.com/) to get some sample data in `.csv` format.
 
 ## Display data
 
@@ -59,8 +64,6 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 
 # Installation
 
-If you want to test the program yourself, I recommend you visit the page [mockaroo](https://mockaroo.com/) to get some sample data in `.csv` format.
-
 ### Using pip
 
 Data visualizer can be installed with pip, along with all the program dependencies in the case they aren't installed. To do so, run the follow command:
@@ -88,6 +91,22 @@ On the other hand, if you want to, you can also download the program from the re
   ```
 
 ---
+
+# Usage
+
+There are several ways in which you can open the program.
+
+## Pip
+
+If Data Visualizer was installed with pip, you can run the program in the terminal by simple writing `data-visualizer` in the terminal. The program will then open.
+
+## Manually
+
+Another way you can run the program is by opening either the module folder installed by pip, or the cloned folder from the repo. Then, once inside the folder, simply run the `data_visualizer` folder as a python module with the following command:
+
+```python
+python3 -m data_visualizer
+```
 
 # Other
 
