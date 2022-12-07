@@ -30,6 +30,7 @@ At the moment, this program can only read data from `.csv` files, but in the fut
   - [Pip installation (optional)](#pip-installation-optional)
 - [File Support](#file-support)
 - [Header bug](#header-bug)
+  - [Bug example](#bug-example)
 - [Changelog](#changelog)
 - [License](#license)
 
@@ -160,7 +161,24 @@ Keywords: `✅ Yes`, `❌ No`, `📅 work in progress`
 
 # Header bug
 
-Currently, there's a bug where the first row of header-less `.csv` files appear messed up. The nature of bug makes it pretty difficult to fix, but with time, I think I'll be able to get it done. So, keep that in mind while working with files wihout a proper header.
+Currently, there's a bug where the first row of header-less `.csv` files gets confused for the file's headers. This happens because Data Visualizer always takes the first row of a .csv file that comes with pre-defined headers, and uses it as the headers of the file. The usefulness of this feature can be seen with files that has its data pre-categorize in the forms of these headers. However, for files that don't do this , this feature becomes a problem.
+
+The nature of this bug makes it pretty difficult to fix, but with time, I think I'll be able to get it done. So, keep that in mind while working with files wihout a proper header for the time being.
+
+## Bug example
+
+    Note: The files used in this example were taken from [mockaroo](https://mockaroo.com/).
+
+<div align='center'>
+
+<p>File with pre-defined headers</p>
+<img src="./design/With%20Headers%20example.png" alt='example of file with headers' width='500'>
+
+<hr>
+
+<p>File without pre-defined headers</p>
+<img src="./design/Header-less%20example.png" alt='example of file without headers' width='500'>
+</div>
 
 # Changelog
 
