@@ -167,7 +167,9 @@ The nature of this bug makes it pretty difficult to fix, but with time, I think 
 
 ## Bug example
 
-    Note: The files used in this example were taken from [mockaroo](https://mockaroo.com/).
+Note: The files used in this example were taken from [mockaroo](https://mockaroo.com/).
+
+<hr>
 
 <div align='center'>
 
