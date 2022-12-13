@@ -9,7 +9,7 @@
 
 <h1> Project Description</h1>
 
-A python program that visualizes data from a `.csv` file. It uses the [PySimpleGui](https://github.com/PySimpleGUI) gui library for its GUI, and [PyDub](https://github.com/jiaaro/pydub/) for some simple error audio handling. 
+A python program that visualizes data from a `.csv` file. It uses the [PySimpleGui](https://github.com/PySimpleGUI) python library for its GUI.
 
 At the moment, this program can only read data from `.csv` files, but in the future I plan on adding support for other filetypes, and an option to connect to a SQL or a MongoDb database.
 
@@ -25,14 +25,15 @@ At the moment, this program can only read data from `.csv` files, but in the fut
 - [Usage](#usage)
   - [Pip](#pip)
   - [Manually](#manually)
-- [Other](#other)
-  - [Dependencies](#dependencies)
-  - [Pip installation (optional)](#pip-installation-optional)
+- [Dependencies](#dependencies)
+  - [PySimpleGui](#pysimplegui)
+    - [Tkinter](#tkinter)
+  - [Pip installation](#pip-installation)
 - [File Support](#file-support)
 - [Header bug](#header-bug)
   - [Bug example](#bug-example)
-- [Changelog](#changelog)
 - [License](#license)
+    - [PySimpleGui](#pysimplegui-1)
 
 # Features
 
@@ -69,7 +70,7 @@ If you want to test the program yourself, I recommend you visit the page [mockar
 
 Data visualizer can be installed with pip, along with all the program dependencies in the case they aren't installed. To do so, run the follow command:
 
-```
+```shell
 pip install data-visualizer
 ```
 
@@ -87,7 +88,7 @@ On the other hand, if you want to, you can also download the program from the re
 
   2. Open the cloned folder and run the `"data_visualizer"` folder as a module with the following command:
 
-  ```python
+  ```shell
   python3 -m data_visualizer
   ```
 
@@ -105,15 +106,15 @@ If Data Visualizer was installed with pip, you can run the program in the termin
 
 Another way you can run the program is by opening either the module folder installed by pip, or the cloned folder from the repo. Then, once inside the folder, simply run the `data_visualizer` folder as a python module with the following command:
 
-```python
+```shell
 python3 -m data_visualizer
 ```
 
-# Other
+# Dependencies
 
-## Dependencies
+## PySimpleGui
 
-By default, Data Visualizer's `setup.py` file was setup in a way that automatically downloads all the packages the program uses and depends of. However, if for some reason you want to install them yourself, Data Visualizer requires the PySimpleGui and PyDub libraries to work.
+By default, Data Visualizer's `setup.py` file was setup in a way that automatically downloads all the packages the program uses and depends of. However, if for some reason you want to install them yourself, Data Visualizer requires the PySimpleGui library to work.
 
 You can install them with pip using the following commands:
 
@@ -121,27 +122,34 @@ You can install them with pip using the following commands:
 pip install PySimpleGUI
 ```
 
-```shell
-pip install pydub
-```
-
-In the case that you don't have pip, scroll down a little bit to see how to install it.
+In the case that you don't have pip, scroll down to the [Pip Instalation](#pip-installation) section to see how to install it.
 
 ---
 
-## Pip installation (optional)
+### Tkinter
+Data Visualizer is made using the PySimpleGui library, which uses Tkinter under the hood. So, it is very important to have Tkinter already setup to your Python version for Data Visualizer to work.
+
+If you don't have Tkinter already with your Python configuration, you will need to do that first.
+
+- Windows: [Follow this video guide](https://www.youtube.com/watch?v=O2PzLeiBEuE).
+- MacOs (Using Homebrew): `brew install python-tk`
+- Linux (Ubuntu): `sudo apt-get update && sudo apt-get install python3-tk`
+
+---
+
+## Pip installation
 
 Don't have pip? You can install it like this:
 
 <h4>Linux & MacOs</h4>
 
-```bash
+```shell
 python3 -m ensurepip
 ```
 
 <h4>Windows</h4>
 
-```bash
+```shell
 py -m ensurepip
 ```
 Please note that the installation of pip in windows can sometimes be... _complicated_. If you are having problems making pip work, I recommend you this [video guide](https://youtu.be/c_qNC1lL4qA) on how to install it.
@@ -182,12 +190,14 @@ Note: The files used in this example were taken from [mockaroo](https://mockaroo
 <img src="./design/Header-less%20example.png" alt='example of file without headers' width='500'>
 </div>
 
-# Changelog
+<!-- # Changelog
 
-[❯ Read the changelog here →](CHANGELOG.md) 📄
+[❯ Read the changelog here →](changelog.md) 📄 -->
 
 # License
 
-MIT License
+This project makes use of the MIT license. To read more about it, you can check it out [here](LICENSE.md).
 
-[❯ Read the license here →](LICENSE.md) 🔏
+### PySimpleGui
+
+This project makes uses of the PySimpleGui python library, which makes use of the LGPL-3.0 license. Read more about this license in the project repo [here](https://github.com/PySimpleGUI/PySimpleGUI/blob/master/license.txt).
