@@ -1,9 +1,7 @@
 import PySimpleGUI as sg
-# import util
-# import winds.layouts
 from .layouts import fw_layout as fwl
 from data_visualizer.util import search_functions as sf, csv_data as cf, dict_functions as df
-from data_visualizer.util.errorHandling import playErrorSound
+
 
 def file_window(data, headings, dictionary):
     file_w_layout = fwl.fileWindowLayout()
@@ -24,7 +22,7 @@ def file_window(data, headings, dictionary):
         event, values = window.read()
         if event == "EXIT" or event == sg.WIN_CLOSED:
             event_list = "EXIT"
-            print('EXITING FILE WINDOW')
+            # print('EXITING FILE WINDOW')
             window.close()
             return event_list
 
@@ -41,19 +39,18 @@ def file_window(data, headings, dictionary):
                     window["-SHOW COMBOBOX-"].update(
                         values=combobox_value, visible=True)
                 else:
-                    table_value = data # Reset table_value to the original data values
+                    table_value = data  # Reset table_value to the original data values
                     table_dict = dictionary
                     window["-SHOW ONLY-"].update(visible=False)
                     window["-SHOW COMBOBOX-"].update(
                         values=[], visible=False)
                     window["-DATA TABLE-"].update(values=table_value)
-                    print('RESETING TABLE VALUES')
+                    # print('RESETING TABLE VALUES')
                 window.refresh()
-            except:
+            except BaseException:
                 window["-ERROR MESSAGE-"].update("ERROR WITH FILTER COMBOBOX - CLICK 'RESTART' BUTTON!")
                 window["-FILTER RESET-"].update(visible=True)
-                playErrorSound()
-                print('ERROR WITH FILTER COMBOBOX')
+                # print('ERROR WITH FILTER COMBOBOX')
                 pass
         
         elif event == "-SHOW COMBOBOX-":
@@ -65,12 +62,11 @@ def file_window(data, headings, dictionary):
                 table_value = df.convert_dict_to_list(table_dict, with_keys=False)
                 
                 window["-DATA TABLE-"].update(values=table_value)
-                print('FILTERING')
-            except:
+                # print('FILTERING')
+            except BaseException:
                 window["-ERROR MESSAGE-"].update("ERROR FILTERING DATA - CLICK 'RESET' BUTTON!")
                 window["-FILTER RESET-"].update(visible=True)
-                playErrorSound()
-                print('ERROR FILTERING DATA')
+                # print('ERROR FILTERING DATA')
                 pass
         
         elif event == "-FILTER RESET-":
@@ -78,10 +74,9 @@ def file_window(data, headings, dictionary):
                 window['-FILTER RESET-'].update(visible=False)
                 window['-ERROR MESSAGE-'].update('')
                 pass
-            except:
+            except BaseException:
                 window["-ERROR MESSAGE-"].update("ERROR RESETING DATA - RESTART PROGRAM!")
-                playErrorSound()
-                print('ERROR SEARCHING DATA')
+                # print('ERROR SEARCHING DATA')
                 pass
 
         # * SEARCH SECTION *
@@ -96,11 +91,10 @@ def file_window(data, headings, dictionary):
 
                 window["-DATA TABLE-"].update(values=search_result)
                 window["-SEARCH RESULT TEXT-"].update(f'{len(search_result)} results', visible=True)
-                print('SEARCHING')
-            except:
+                # print('SEARCHING')
+            except BaseException:
                 window["-ERROR MESSAGE-"].update("ERROR SEARCHING DATA - CLICK 'RESET' BUTTON!")
-                playErrorSound()
-                print('ERROR SEARCHING DATA')
+                # print('ERROR SEARCHING DATA')
                 pass
 
         elif event == "-SEARCH RESET-":
@@ -109,11 +103,10 @@ def file_window(data, headings, dictionary):
                 window["-SEARCH-"].update('')
                 window["-DATA TABLE-"].update(values=table_value)
                 window["-SEARCH RESULT TEXT-"].update('', visible=False)
-                print('RESETING TABLE VALUES')
-            except:
+                # print('RESETING TABLE VALUES')
+            except BaseException:
                 window["-ERROR MESSAGE-"].update('ERROR RESETING DATA - RESTART PROGRAM!')
-                playErrorSound()
-                print('ERROR RESETING DATA')
+                # print('ERROR RESETING DATA')
                 pass
 
     # If window close, open main window

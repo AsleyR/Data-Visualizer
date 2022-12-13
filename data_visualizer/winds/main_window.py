@@ -1,18 +1,13 @@
 import PySimpleGUI as sg
 import os.path
-# import util
-# import winds.layouts
 from .layouts import mw_layout as ml
 from data_visualizer.util import csv_data as cd, dict_functions as df
-from data_visualizer.util.errorHandling import playErrorSound
 
 
 def main_window():
     main_layout = ml.mainWindowLayout()
     main_layout = main_layout.create_layout()
     font = ("Arial", 12)
-
-    ERROR_SOUND = "./media/audio/computer-error.wav"
 
     csv_data = []
     csv_data_dict = {}
@@ -25,7 +20,7 @@ def main_window():
         event, values = window.read()
         if event == "EXIT" or event == sg.WINDOW_CLOSED:
             event_list = ['EXIT']
-            print('EXITING MAIN WINDOW')
+            # print('EXITING MAIN WINDOW')
             window.close()
             return event_list
 
@@ -34,25 +29,23 @@ def main_window():
             folder = values['-FOLDER-']
             try:
                 file_list = os.listdir(folder)
-                print('FOLDER FOUND SUCCESFULLY')
+                # print('FOLDER FOUND SUCCESFULLY')
         
-            except:
+            except BaseException:
                 file_list = []
                 window["-FILE STATUS-"].update(
                     'ERROR FINDING FOLDER',
                     text_color="red"
                     )
-                try:
-                    playErrorSound()
-                except:
-                    pass
-                print('ERROR FINDING FOLDER')
+                # print('ERROR FINDING FOLDER')
 
             fnames = [
                 f
                 for f in file_list
+                # Show files with only this extension
                 if os.path.isfile(os.path.join(folder, f))
-                and f.lower().endswith((".csv")) # Show files with only this extension
+                and f.lower().endswith((".csv"))
+
             ]
             window["-FILE LIST-"].update(fnames)
         
@@ -66,7 +59,7 @@ def main_window():
 
                 # Convert data from CSV file to a dict list
                 csv_file = filename
-                data_class= cd.csvData(csv_file)
+                data_class = cd.csvData(csv_file)
                 data_dict = data_class.create_data_dict()
 
                 csv_data = df.get_dict_values(data_dict)
@@ -78,41 +71,42 @@ def main_window():
                     text_color="green"
                     )
                 window["-OPEN FILE-"].update(visible=True)
-                event_list = ["-FILE LIST-", csv_data, csv_headings, csv_data_dict]
+                event_list = [
+                    "-FILE LIST-",
+                    csv_data,
+                    csv_headings,
+                    csv_data_dict
+                    ]
                 # return event_list
-                print('FILE SUCCESFULLY SELECTED')
+                # print('FILE SUCCESFULLY SELECTED')
                 pass
 
             # Error selecting file. Horrible except usage tho lmao
-            except:
+            except BaseException:
                 window["-FILE STATUS-"].update(
                     'ERROR SELECTING FILE',
                     text_color="red"
                     )
-                try:
-                    playErrorSound()
-                except:
-                    pass
-                print('ERROR SELECTING FILE')
+                # print('ERROR SELECTING FILE')
                 pass
             
         elif event == "-OPEN FILE-":
             try:
-                event_list = ["Open Window", csv_data, csv_headings, csv_data_dict]
-                print('CLOSING MAIN WINDOW - OPENING FILE WINDOW')
+                event_list = [
+                    "Open Window",
+                    csv_data,
+                    csv_headings,
+                    csv_data_dict
+                    ]
+                # print('CLOSING MAIN WINDOW - OPENING FILE WINDOW')
                 window.close()
                 return event_list
-            except:
+            except BaseException:
                 window["-FILE STATUS-"].update(
                     'ERROR OPENING FILE',
                     text_color="red"
                     )
-                try:
-                    playErrorSound()
-                except:
-                    pass
-                print('ERROR OPENING FILE')
+                # print('ERROR OPENING FILE')
                 pass
-
 
     window.close()
