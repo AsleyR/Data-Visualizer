@@ -1,11 +1,11 @@
 from .winds import main_window as mw
 from .winds import file_window as fw
 
-def init_program():
+
+def main():
     # Create Windows
     main_window = mw.main_window
     file_window = fw.file_window
-
 
     # Program Controller
     # Event loop
@@ -16,13 +16,13 @@ def init_program():
         event_main = main_window()
 
         if event_main[0] == "EXIT":
-            print('EXISTING LOOP - CLOSING PROGRAM!')
+            # print('EXISTING LOOP - CLOSING PROGRAM!')
             break
 
         # I HATE these nested functions, but it works >:(
-        # obvs a temporal solution  
+        # obvs a temporal solution
         elif event_main[0] == "Open Window":
-            print('OPENING FILE WINDOW')
+            # print('OPENING FILE WINDOW')
             # set data values
             csv_data = event_main[1]
             csv_headings = event_main[2]
@@ -31,13 +31,11 @@ def init_program():
             event_file = file_window(csv_data, csv_headings, csv_data_dict)
 
             if event_file[0] == "EXIT":
-                print('EXITING LOOP - CLOSING FILE WINDOW')
+                # print('EXITING LOOP - CLOSING FILE WINDOW')
                 break
             pass
 
-def main():
-    init_program()
 
 # Init script
 if __name__ == "__main__":
-    main();
+    main()
