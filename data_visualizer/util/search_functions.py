@@ -1,5 +1,6 @@
 import re
 
+
 class searchFunctions:
     def __init__(self, data):
         self.data = data
@@ -20,7 +21,7 @@ class searchFunctions:
         data = self.data
         for i in range(len(data)):
             for value in data[i]:
-                search = re.search(search_value, data[i]) # Regex search
+                search = re.search(search_value, data[i])  # Regex search
                 if search:
                     item_list.append(data[i])
         return item_list
@@ -67,11 +68,12 @@ def busqueda_prubea(data, search_item, *, search_param=""):
                     item_list.append(data[i])
     return item_list
 
+
 # Take list of dicts and searchs for a specific param
 # It can do two things:
 # 1) Search in list of dict with only search param or
 # 2) Search in list of dict search param found inside the key of header param
-# ex 2: {'is_potato': 'yes'} -> search 'yes' in 'is_potato' 
+# ex 2: {'is_potato': 'yes'} -> search 'yes' in 'is_potato'
 def busqueda_dos_dict(data, search_param, header_param=""):
     item_list = []
     if header_param == "":
@@ -90,5 +92,3 @@ def busqueda_dos_dict(data, search_param, header_param=""):
                     if search:
                         item_list.append(data[i])
         return
-
-
