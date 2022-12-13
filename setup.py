@@ -1,14 +1,13 @@
-from importlib.metadata import entry_points
 from setuptools import setup, find_packages
 import codecs
 import os
 
-here = os.path.abspath(os.path.dirname(__file__))
+HERE = os.path.abspath(os.path.dirname(__file__))
 
-with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
+with codecs.open(os.path.join(HERE, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '0.1.7'
+VERSION = '0.1.8'
 DESCRIPTION = "'Python program that visualizes data from a .csv file.'"
 LONG_DESCRIPTION = ""
 
@@ -23,12 +22,20 @@ setup(
     author_email='asleyrobleto@gmail.com',
     url='https://github.com/AsleyR/Data-Visualizer',
     packages=find_packages(exclude=('tests*', 'test*', 'testing*')),
-    install_requires=['pysimplegui', 'pydub'],
-    keywords=['python', 'data', 'csv', 'visualization', 'data visualization'],
+    install_requires=['pysimplegui'],
+    keywords=[
+        'python', 'data', 'csv',
+        'visualization', 'data visualization',
+        "data parsing"
+        ],
     classifiers=[
-        "Development Status :: 1 - Planning",
+        "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
@@ -36,6 +43,7 @@ setup(
     entry_points={
         'console_scripts': [
             'data-visualizer=data_visualizer.__main__:main',
+            'dvisual=data_visualizer.__main__:main'
         ],
     },
 )
