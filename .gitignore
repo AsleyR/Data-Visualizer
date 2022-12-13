@@ -1,6 +1,6 @@
-**/__pycache__
-**/.DS_Store
+*__pycache__/
+*/.DS_Store
 *.pyo
-**dist
-**build
-**data_visualizer.egg-info
+*dist/
+*build/
+*data_visualizer.egg-info
