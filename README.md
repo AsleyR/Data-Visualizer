@@ -2,7 +2,7 @@
       <img src="data_visualizer/media/images/Data-V-Logo-500-200.png" alt="Project logo"/>
     <br>
     <br>
-    V. 0.1.7
+    V. 0.1.8
 </h4>
 
 <br>
